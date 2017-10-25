@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/checkBox"
+        android:padding="10dp"/>
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:src="@mipmap/ic_launcher"
+        android:padding="10dp"
+        android:id="@+id/iv"
+        android:layout_centerVertical="true"
+        android:layout_margin="25dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout"
+        android:layout_alignBottom="@+id/checkBox"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_toRightOf="@+id/iv"
+        android:layout_toEndOf="@+id/iv">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="name"
+            android:lines="1"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="price"
+            />
+
+
+    </LinearLayout>
+
+    <view.AmountView
+        android:id="@+id/amount_view"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        app:btnWidth="36dp"
+        app:tvWidth="50dp"
+        android:layout_below="@+id/linearLayout"
+        android:layout_toRightOf="@+id/iv"
+        android:layout_toEndOf="@+id/iv">
+    </view.AmountView>
+
+
+</RelativeLayout>
